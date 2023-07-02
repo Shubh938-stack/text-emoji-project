@@ -9,32 +9,23 @@ function encryption() {
     document.querySelector("#encrypt-btn").addEventListener("click", function () {
 
 
-        // get the password
+       
 
         var pass = document.getElementById("password").value;
         console.log(pass)
 
 
-        // get the input
-
+        
         var input = document.getElementById("textmsg").value;
         console.log(input)
 
-        //converting it into a set of emojis
-
+        
         var str = input.split("")
         str.forEach(element => {
             clutter += `&#128${(element.charCodeAt())} `
-            // console.log((element.charCodeAt()) * Math.floor(Math.random() * 10))
+            
         });
-        // console.log(clutter)
-
-        //saving emojis in localstorage
-
-        // localStorage.setItem("emojis", clutter)
-
-        //showing result
-
+        
         document.querySelector("#result").innerHTML = clutter
 
         var dataarr = [];
@@ -60,7 +51,7 @@ function decryption() {
         var str2 = input2.split(" ")
         str2.forEach(element => {
                 clutter2 += `&#${(element.codePointAt(0))} `
-                // console.log((element.charCodeAt()) * Math.floor(Math.random() * 10))
+                
         });
         console.log(clutter2)
         var found;
@@ -90,8 +81,7 @@ function btnClicking() {
 
     document.querySelector("button").addEventListener("click", function () {
         document.querySelector("#result").style.display = "block"
-        // console.log(localStorage.getItem("password"))
-        // console.log(localStorage.getItem("emojis"))
+       
     })
     document.querySelector("#dec-btn").addEventListener("click", function () {
         document.querySelector("#result").style.display = "none"
@@ -120,4 +110,3 @@ btnClicking();
 
 
 
-// I am competitive and I feel bad when we lose. You can see it in me when we've lost. I'm in a bad way. I don't like to talk to anyone.
